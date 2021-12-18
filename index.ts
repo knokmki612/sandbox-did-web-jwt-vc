@@ -18,7 +18,7 @@ const issuer = {
   alg: "EdDSA",
 } as Issuer;
 
-/** Prerequisites of Veryfying JWTs */
+/** Prerequisites of Verifying JWTs */
 const resolver = new Resolver(getResolver());
 
 async function main() {
@@ -49,7 +49,7 @@ async function main() {
   /** Verifying a Verifiable Credential */
   const verifiedVC = await verifyCredential(vcJwt, resolver);
   console.log(verifiedVC);
-  /** Veryfing a Verifiable Presentation */
+  /** Verifying a Verifiable Presentation */
   const verifiedVP = await verifyPresentation(vpJwt, resolver);
   console.log(verifiedVP);
 }
