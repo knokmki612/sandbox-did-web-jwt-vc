@@ -1,2 +1,4 @@
 *.log
+/.env
+/id_ed25519
 node_modules

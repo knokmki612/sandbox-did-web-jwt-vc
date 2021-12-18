@@ -1,0 +1,18 @@
+{
+  "@context": "https://w3id.org/did/v1",
+  "id": "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc",
+  "publicKey": [
+    {
+      "id": "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc#owner",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc",
+      "publicKeyMultibase": "AAAAC3NzaC1lZDI1NTE5AAAAILecasbijhY+yzB8C8sOESl5//t0i+/ZqbsBWcMCikJv"
+    }
+  ],
+  "authentication": [
+    {
+      "type": "Ed25519SignatureAuthentication2020",
+      "publicKey": "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc#owner"
+    }
+  ]
+}

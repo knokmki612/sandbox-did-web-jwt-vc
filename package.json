@@ -40,5 +40,11 @@
     "format:prettier": "prettier --write .",
     "lint": "eslint .",
     "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "did-jwt": "^5.12.1",
+    "did-jwt-vc": "^2.1.8",
+    "did-resolver": "^3.1.5",
+    "web-did-resolver": "^2.0.11"
   }
 }
