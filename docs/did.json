@@ -10,9 +10,6 @@
     }
   ],
   "authentication": [
-    {
-      "type": "Ed25519SignatureAuthentication2020",
-      "publicKey": "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc#owner"
-    }
+    "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc#owner"
   ]
 }
