@@ -13,9 +13,9 @@ import {
 
 /** Prerequisites of Creating JWTs */
 const issuer = {
-  did: 'did:web:knokmki612.github.io:sandbox-did-web-jwt-vc',
+  did: "did:web:knokmki612.github.io:sandbox-did-web-jwt-vc",
   signer: EdDSASigner(process.env.PRIVATE_KEY ?? ""),
-  alg: 'EdDSA',
+  alg: "EdDSA",
 } as Issuer;
 
 /** Prerequisites of Veryfying JWTs */
@@ -48,10 +48,10 @@ async function main() {
   const vpJwt = await createVerifiablePresentationJwt(vpPayload, issuer);
   /** Verifying a Verifiable Credential */
   const verifiedVC = await verifyCredential(vcJwt, resolver);
-  console.log(verifiedVC)
+  console.log(verifiedVC);
   /** Veryfing a Verifiable Presentation */
   const verifiedVP = await verifyPresentation(vpJwt, resolver);
-  console.log(verifiedVP)
+  console.log(verifiedVP);
 }
 
 export default main;
