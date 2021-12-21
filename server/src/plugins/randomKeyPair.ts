@@ -6,15 +6,15 @@ export default fp(async (fastify, _opts) => {
   const publicKey = await getPublicKey(privateKey);
   fastify.decorate("randomKeyPair", () => ({
     privateKey,
-    publicKey
-  }))
-})
+    publicKey,
+  }));
+});
 
 declare module "fastify" {
   export interface FastifyInstance {
     randomKeyPair(): {
-      privateKey: Uint8Array,
-      publicKey: Uint8Array,
-    }
+      privateKey: Uint8Array;
+      publicKey: Uint8Array;
+    };
   }
 }

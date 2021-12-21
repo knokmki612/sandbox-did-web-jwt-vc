@@ -1,9 +1,6 @@
 import { Resolver } from "did-resolver";
 import { getResolver } from "web-did-resolver";
-import {
-  verifyCredential,
-  verifyPresentation,
-} from "did-jwt-vc";
+import { verifyCredential, verifyPresentation } from "did-jwt-vc";
 
 /** Prerequisites of Verifying JWTs */
 const resolver = new Resolver(getResolver());
@@ -21,7 +18,7 @@ async function main() {
   const responseVpJwt = await fetch("http://localhost:4000/vp/create", {
     method: "POST",
     body: JSON.stringify(verifiedVc.verifiableCredential),
-    headers: {'Content-Type': 'application/json'}
+    headers: { "Content-Type": "application/json" },
   });
   const vpJwt = await responseVpJwt.text();
 
