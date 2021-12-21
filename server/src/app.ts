@@ -2,7 +2,7 @@ import { join } from "path";
 import AutoLoad, { AutoloadPluginOptions } from "fastify-autoload";
 import Cors from "fastify-cors";
 import { FastifyPluginAsync } from "fastify";
-import { HOSTNAME, PORT, CLIENT_ORIGIN } from "./utils/env";
+import { CLIENT_ORIGIN } from "./utils/env";
 
 export type AppOptions = {
   // Place your custom options for app below here.
@@ -34,8 +34,6 @@ const app: FastifyPluginAsync<AppOptions> = async (
   void fastify.register(Cors, {
     origin: CLIENT_ORIGIN,
   });
-
-  void fastify.listen({ port: PORT, host: HOSTNAME });
 };
 
 export default app;
