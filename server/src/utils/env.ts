@@ -1,5 +1,3 @@
-import("dotenv").then(({ config }) => config());
-
 export const HOSTNAME = process.env.HOSTNAME ?? "localhost";
 export const PORT = Number(
   process.env.PORT ?? process.env.FASTIFY_PORT ?? 3000
