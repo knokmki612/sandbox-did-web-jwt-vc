@@ -13,6 +13,9 @@ rules:
   "tsc/config":
     - error
     - configFile: "tsconfig.json"
+  "@typescript-eslint/no-unused-vars":
+    - error
+    - argsIgnorePattern: "^_"
 overrides:
   - files: [jest.config.js]
     env:
