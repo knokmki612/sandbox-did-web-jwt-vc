@@ -1,16 +1,8 @@
 # Sandbox of DID(:web)(:jwt)(:jwt-vc)
 
-- No specifying directory hierarchy
-- CI (Lint / Test / Format) ready
-- Library update automation ready
-- Configure with recommended presets as possible
-
 ## Usage
 
-```shell
-$ ssh-keygen -t ed25519 -f id_ed25519
-$ echo "PRIVATE_KEY=$(cat ./id_ed25519 | head -n -1 | tail -n +2 | tr -d '\n')" >> .env
-```
+Start dev server by `yarn dev`
 
 ## Related Docs
 

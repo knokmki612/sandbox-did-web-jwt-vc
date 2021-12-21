@@ -1,16 +1,18 @@
 {
-  "name": "typescript-boilerplate",
-  "description": "One of the commonplace TypeScript boilerplate",
+  "name": "sandbox-did-web-jwt-vc",
+  "description": "a sandbox of did(:web)(:jwt(:vc))",
   "version": "1.0.0",
   "author": "Kimiaki Kuno <knokmki612@gmail.com>",
   "bugs": {
-    "url": "https://github.com/knokmki612/typescript-boilerplate/issues"
+    "url": "https://github.com/knokmki612/sandbox-did-web-jwt-vc/issues"
   },
   "devDependencies": {
     "@tsconfig/recommended": "1.0.1",
     "@types/jest": "27.0.3",
     "@typescript-eslint/eslint-plugin": "5.7.0",
     "@typescript-eslint/parser": "5.7.0",
+    "did-jwt-vc": "^2.1.8",
+    "did-resolver": "^3.1.5",
     "eslint": "8.5.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-jest": "25.3.0",
@@ -19,32 +21,38 @@
     "npm-run-all": "4.1.5",
     "prettier": "2.5.1",
     "ts-jest": "27.1.2",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "vite": "^2.7.4",
+    "web-did-resolver": "^2.0.11"
   },
   "engines": {
     "node": ">=14"
   },
-  "homepage": "https://github.com/knokmki612/typescript-boilerplate#readme",
+  "homepage": "https://github.com/knokmki612/sandbox-did-web-jwt-vc#readme",
   "keywords": [
-    "automation",
-    "boilerplate",
-    "ci",
-    "typescript"
+    "did",
+    "jwt",
+    "vite"
   ],
   "license": "MIT",
   "main": "index.ts",
-  "repository": "git@github.com:knokmki612/typescript-boilerplate.git",
+  "private": true,
+  "repository": "git@github.com:knokmki612/sandbox-did-web-jwt-vc.git",
   "scripts": {
-    "format": "run-s format:*",
-    "format:eslint": "eslint --fix .",
-    "format:prettier": "prettier --write .",
+    "build": "vite build",
+    "dev": "run-p dev:*",
+    "dev:client": "vite",
+    "dev:server": "yarn --cwd server dev",
+    "format": "prettier --write .",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "preview": "run-p preview:*",
+    "preview:client": "run-s build && vite preview",
+    "preview:server": "yarn --cwd server start",
     "test": "jest --passWithNoTests"
   },
-  "dependencies": {
-    "did-jwt": "^5.12.1",
-    "did-jwt-vc": "^2.1.8",
-    "did-resolver": "^3.1.5",
-    "web-did-resolver": "^2.0.11"
-  }
+  "type": "module",
+  "workspaces": [
+    "server"
+  ]
 }

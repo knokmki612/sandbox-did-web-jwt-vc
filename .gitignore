@@ -1,4 +1,4 @@
 *.log
 /.env
-/id_ed25519
+dist
 node_modules
