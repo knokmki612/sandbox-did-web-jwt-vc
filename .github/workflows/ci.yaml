@@ -17,7 +17,7 @@ jobs:
       - run: yarn test
       - id: format
         run: |
-          yarn format
+          yarn run-s lint:fix format
           echo "::set-output name=status::$(git status --porcelain)"
       - if: steps.format.outputs.status != ''
         run: |
