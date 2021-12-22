@@ -7,7 +7,7 @@ const resolver = new Resolver(getResolver());
 
 async function main() {
   /** Create a Verifiable Credential */
-  const responseVcJwt = await fetch("http://localhost:4000/vc/create");
+  const responseVcJwt = await fetch("https://localhost:4000/vc/create");
   const vcJwt = await responseVcJwt.text();
 
   /** Verifying a Verifiable Credential */
@@ -15,7 +15,7 @@ async function main() {
   console.log(verifiedVc);
 
   /** Create a Verifiable Presentation */
-  const responseVpJwt = await fetch("http://localhost:4000/vp/create", {
+  const responseVpJwt = await fetch("https://localhost:4000/vp/create", {
     method: "POST",
     body: JSON.stringify(verifiedVc.verifiableCredential),
     headers: { "Content-Type": "application/json" },

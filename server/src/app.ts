@@ -2,7 +2,7 @@ import { join } from "path";
 import AutoLoad, { AutoloadPluginOptions } from "fastify-autoload";
 import Cors from "fastify-cors";
 import { FastifyPluginAsync } from "fastify";
-import { CLIENT_ORIGIN } from "./utils/env";
+import { CLIENT_ORIGIN, KEY, CERT } from "./utils/env";
 
 export type AppOptions = {
   // Place your custom options for app below here.
@@ -38,3 +38,10 @@ const app: FastifyPluginAsync<AppOptions> = async (
 
 export default app;
 export { app };
+
+export const options = {
+  https: {
+    key: KEY,
+    cert: CERT
+  }
+}

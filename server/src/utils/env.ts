@@ -5,3 +5,5 @@ export const PORT = Number(
 export const HOST = `${HOSTNAME}:${PORT}`;
 export const CLIENT_ORIGIN =
   process.env.CLIENT_ORIGIN ?? "http://localhost:3000";
+export const KEY = process.env.KEY ?? "";
+export const CERT = process.env.CERT ?? "";

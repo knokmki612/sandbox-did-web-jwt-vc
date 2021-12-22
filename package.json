@@ -46,9 +46,7 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "preview": "run-p preview:*",
-    "preview:client": "run-s build && vite preview",
-    "preview:server": "yarn --cwd server start",
+    "preview": "run-s build && vite preview",
     "test": "jest --passWithNoTests"
   },
   "type": "module",

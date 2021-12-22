@@ -1,8 +1,19 @@
 # Sandbox of DID(:web)(:jwt)(:jwt-vc)
 
+## Requirements
+
+Please prepare TLS certificate by [mkcert](https://github.com/FiloSottile/mkcert) or other tools for running local HTTPS server. web:did method does not define a case of resolving through http connection.
+
 ## Usage
 
-Start dev server by `yarn dev`
+Place dotenv to `server/.env` like this:
+
+```
+KEY=<certificate-key-path>
+CERT=<certificate-path>
+```
+
+Then start dev server by `yarn dev`
 
 ## Related Docs
 

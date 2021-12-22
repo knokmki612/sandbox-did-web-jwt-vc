@@ -40,7 +40,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "npm-run-all build -p dev:*",
-    "dev:fastify": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js",
+    "dev:fastify": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js --options",
     "dev:ts": "tsc -w",
     "start": "run-s build && fastify start -l info dist/app.js",
     "test": "run-s test:{ts,unit}",
