@@ -1,4 +1,5 @@
 import { join } from "path";
+import { readFileSync } from "fs";
 import AutoLoad, { AutoloadPluginOptions } from "fastify-autoload";
 import Cors from "fastify-cors";
 import { FastifyPluginAsync } from "fastify";
@@ -41,7 +42,7 @@ export { app };
 
 export const options = {
   https: {
-    key: KEY,
-    cert: CERT,
+    key: readFileSync(join(__dirname, KEY)),
+    cert: readFileSync(join(__dirname, CERT)),
   },
 };
