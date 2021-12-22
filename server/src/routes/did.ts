@@ -12,9 +12,9 @@ const did: FastifyPluginAsync = async (fastify, _opts): Promise<void> => {
       publicKey: [
         {
           id: `did:web:${encoded}#owner`,
-          type: "Ed25519VerificationKey2020",
+          type: "Ed25519VerificationKey2018",
           controller: `did:web:${encoded}`,
-          publicKeyMultibase: toString(publicKey, "base64url"),
+          publicKeyBase58: toString(publicKey, "base58btc"),
         },
       ],
       authentication: [`did:web:${encoded}`],
