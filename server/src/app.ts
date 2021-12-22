@@ -42,6 +42,6 @@ export { app };
 export const options = {
   https: {
     key: KEY,
-    cert: CERT
-  }
-}
+    cert: CERT,
+  },
+};
