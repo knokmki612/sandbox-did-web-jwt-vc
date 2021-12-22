@@ -6,13 +6,15 @@ Please prepare TLS certificate by [mkcert](https://github.com/FiloSottile/mkcert
 
 ## Usage
 
-Place cert files to `server/dist`, dotenv to `server/.env` like this:
+Stringify cert files like `cat <cert-file> | awk '{ printf $0"\\n" }'`
+
+Place dotenv to `server/.env` as follows:
 
 ```
-KEY=<certificate-key-path>
-CERT=<certificate-path>
+HOSTNAME=localhost
+KEY="-----BEGIN PRIVATE KEY-----\n...-----END PRIVATE KEY-----\n"
+CERT="-----BEGIN CERTIFICATE-----\n...-----END CERTIFICATE-----\n"
 ```
-
 
 Then start dev server by `yarn dev`
 
